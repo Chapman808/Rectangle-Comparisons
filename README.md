@@ -1,4 +1,4 @@
-# rectangles-takehome
+# rectangle comparisons takehome
 
 ## Intersections:
 
@@ -38,3 +38,18 @@ Here, A and B do not intersect:
 
 ![image](https://user-images.githubusercontent.com/16928672/134568528-5791a4fd-fb13-4e33-b101-88ae422836fe.png)
 
+## Containment
+
+### Assumptions:
+1. a contained rectangle can partially or fully share sides with its container
+2. identical rectangles 'contain' eachother
+3. a rectangle will be both contained and intersect with its container if it shares any sides 
+
+todo
+
+## Adjacency
+
+### Assumptions:
+1. Adjacent rectangles cannot overlap; internal adjacency does not count, such as pictured:
+
+![image](https://user-images.githubusercontent.com/16928672/134569226-f01e06b8-a14c-489d-9d16-ff3e45d0fb37.png)
