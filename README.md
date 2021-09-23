@@ -11,20 +11,13 @@
 
 Rectangles A and B intersect at every point that a side of A and the two perpendicular sides of B have in common. So A has eight opportunities for intersection (but can't actually have more than four in total, since duplicates don't count):
 
->A_left and B_top
-
->A_left and B_bottom
-
->A_right and B_top
-
->A_right and B_bottom
-
->A_top and B_left
-
->A_top and B_right
-
->A_bottom and B_left
-
+>A_left and B_top  
+>A_left and B_bottom  
+>A_right and B_top  
+>A_right and B_bottom  
+>A_top and B_left  
+>A_top and B_right  
+>A_bottom and B_left  
 >A_bottom and B_right
 
 I found that the intersection of a pair or horizontal and vertical segments can be determined as follows:
@@ -44,10 +37,22 @@ Here, A and B do not intersect:
 2. identical rectangles 'contain' eachother
 3. a rectangle will be both contained and intersect with its container if it shares any sides 
 
+Determining adjacency is much easier than intersections. We only need to ensure that all sides of A are closer or as close to the center of B than the corresponding side of B, and vice versa. 
+Rectangle A is contained in B if the following conditional is true:
+
+> A.left >= B.right AND  
+> A.right <= B.right AND  
+> A.top <= B.top AND  
+> A.bottom >= B.bottom
+
+directions left, right, top, and bottom represent the positions of a rectangle's boundaries in each direction, as shown:
+
+![image](https://user-images.githubusercontent.com/16928672/134574042-f2d13ac1-2edc-47ba-aacd-57f4bee9912d.png)
 
 ## Adjacency
 
 ### Assumptions:
 1. Adjacent rectangles cannot overlap; internal adjacency does not count, such as pictured:
 
-![image](https://user-images.githubusercontent.com/16928672/134569226-f01e06b8-a14c-489d-9d16-ff3e45d0fb37.png)
+![image](https://user-images.githubusercontent.com/16928672/134574096-62e358d6-5258-4967-a375-33396116994d.png)
+
