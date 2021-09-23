@@ -81,10 +81,10 @@ Within the assumptions sepecified, adjacency is fairly simple to determine. The 
 
 1. a directional boundary of A must be equal to the opposite directional boundary of B (e.g. A.left == B.right) AND
 2. A and B's positions must overlap on the perpendicular axis to the adjacency found.
-    - for rectangles adjacent on the X axis, A and B must share some space on the Y axis
-    - for rectangles adjacent on the Y axis, A and B must share some space on the X axis
+    - for rectangles adjacent on the X axis, A and B must share at least one point on the Y axis
+    - for rectangles adjacent on the Y axis, A and B must share at least one point on the X axis
 
-![image](https://user-images.githubusercontent.com/16928672/134585989-eeb70aef-8f40-4882-b0a5-68baa9c395ea.png)
+![image](https://user-images.githubusercontent.com/16928672/134587861-3a3a595a-bfec-4d28-9abd-473339990ffd.png)
 
 Rectangle A is adjacent to Rectangle B if either of the following conditionals are true:
 
