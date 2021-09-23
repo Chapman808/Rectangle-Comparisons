@@ -5,7 +5,7 @@
 ![image](https://user-images.githubusercontent.com/16928672/134570813-2f122251-bf4c-4ba7-be55-cbe61cb774f6.png)
 
 ### Assumptions:
-1. parallel segments cannot intersect
+1. parallel segments cannot intersect (even if they share common points-- or else adjecent sides would have infinite points of intersection).
 2. segments can intersect at their terminating points (vertices); 
 3. duplicate intersection points (e.g. a vertex of A landing on the same point as a vertex of B, creating two 'intersections' according to our rules) will count as only one intersection
 
