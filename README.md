@@ -1,5 +1,19 @@
 # rectangle comparisons takehome
 
+## Description
+
+This project makes various comparisons between two rectangles: Intersections, Containment, and Adjacency. 
+
+## Usage
+
+Compile with maven or use the pre-compiled JAR file on the command line. Two random rectangles will be generated, and each property will be calculated. 
+The application will print the following to the command line:
+
+1. The left, right, top, and bottom boundaries of rectangles A and B.
+2. Whether or not the rectangles A and B intersect, and a list of all intersection points if so.
+3. Whether or not the rectangles are adjacent
+4. Whether or not A or B fully contains the other
+
 ## Intersections:
 
 ![image](https://user-images.githubusercontent.com/16928672/134570813-2f122251-bf4c-4ba7-be55-cbe61cb774f6.png)
