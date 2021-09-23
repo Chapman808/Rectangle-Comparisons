@@ -69,9 +69,7 @@ Within the assumptions sepecified, adjacency is fairly simple to determine. The 
     - for rectangles adjacent on the X axis, there must be a point on the Y axis in which both rectangles exist
     - for rectangles adjacent on the Y axis, there must be a point on the X axis in which both rectangles exist
 
-![image](https://user-images.githubusercontent.com/16928672/134585008-8fdf8613-d302-4bc7-a389-fd56b5da7853.png)
-
-
+![image](https://user-images.githubusercontent.com/16928672/134585989-eeb70aef-8f40-4882-b0a5-68baa9c395ea.png)
 
 Rectangle A is adjacent to Rectangle B if either of the following conditionals are true:
 
