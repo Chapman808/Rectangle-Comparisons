@@ -41,10 +41,11 @@ Here, A and B do not intersect:
 2. identical rectangles 'contain' eachother
 3. a rectangle will be both contained and intersect with its container if it shares any sides 
 
-Determining adjacency is much easier than intersections. We only need to ensure that all sides of A are closer or as close to the center of B than the corresponding side of B, and vice versa. 
+Determining containment is much easier than intersections. We only need to ensure that all sides of A are closer or as close to the center of B than the corresponding side of B, and vice versa. 
+
 Rectangle A is contained in B if the following conditional is true:
 
-> A.left >= B.right AND  
+> A.left >= B.left AND  
 > A.right <= B.right AND  
 > A.top <= B.top AND  
 > A.bottom >= B.bottom
