@@ -45,7 +45,6 @@ Here, A and B do not intersect:
 2. identical rectangles 'contain' eachother
 3. a rectangle will be both contained and intersect with its container if it shares any sides 
 
-todo
 
 ## Adjacency
 
