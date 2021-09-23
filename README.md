@@ -1,4 +1,4 @@
-# rectangle comparisons takehome
+# Rectangle Comparisons
 
 ## Description
 
