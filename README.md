@@ -2,13 +2,13 @@
 
 ## Intersections:
 
-
-![image](https://user-images.githubusercontent.com/16928672/134567052-6a20fb07-a5e5-43fa-834f-4bc0ce7614d2.png)
+![image](https://user-images.githubusercontent.com/16928672/134570813-2f122251-bf4c-4ba7-be55-cbe61cb774f6.png)
 
 ### Assumptions:
 1. parallel segments cannot intersect
 2. all segments are perpendicular or parallel
-3. segments can intersect at their terminating points
+3. segments can intersect at their terminating points; 
+4. duplicate intersection points (e.g. a vertex of A landing on the same point as a vertex of B, creating two 'intersections' according to our rules) will count as only one intersection
 
 Rectangles A and B intersect at every point that side of A and the two perpendicular sides of B have in common. So A has eight opportunities for intersection:
 
