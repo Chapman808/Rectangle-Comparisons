@@ -3,4 +3,17 @@
   <groupId>rectangles-takehome</groupId>
   <artifactId>rectangles-takehome</artifactId>
   <version>0.0.1-SNAPSHOT</version>  
+    <properties>
+    <maven.compiler.source>1.6</maven.compiler.source>
+    <maven.compiler.target>1.6</maven.compiler.target>
+  </properties>
+  <dependencies>
+  <!-- https://mvnrepository.com/artifact/junit/junit -->
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.2</version>
+    <scope>test</scope>
+</dependency>
+  </dependencies>
 </project>
