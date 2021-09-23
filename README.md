@@ -9,7 +9,7 @@
 2. segments can intersect at their terminating points (vertices); 
 3. duplicate intersection points (e.g. a vertex of A landing on the same point as a vertex of B, creating two 'intersections' according to our rules) will count as only one intersection
 
-Rectangles A and B intersect at every point that side of A and the two perpendicular sides of B have in common. So A has eight opportunities for intersection:
+Rectangles A and B intersect at every point that a side of A and the two perpendicular sides of B have in common. So A has eight opportunities for intersection (but can't actually have more than four in total, since duplicates don't count):
 
 >A_left and B_top
 
