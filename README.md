@@ -27,11 +27,11 @@ Rectangles A and B intersect at every point that side of A and the two perpendic
 
 >A_bottom and B_right
 
-I found that the interseciton of a pair or horizontal and vertical segments can be determined as follows:
+I found that the intersection of a pair or horizontal and vertical segments can be determined as follows:
 
 ![image](https://user-images.githubusercontent.com/16928672/134568217-3b16135b-def1-4491-a00d-37539f86558a.png)
 
-a and b being the minimum point of each segment A and B, respectively (and a_x is the x coordinate of a). 'i' is the intersection point, if it exists.
+a and b being the minimum point (on their respective axis) of each segment A and B (and a_x is the x coordinate of a). 'i' is the intersection point, if it exists.
 
 Here, A and B do not intersect:
 
