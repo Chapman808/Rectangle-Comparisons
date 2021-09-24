@@ -1,27 +1,61 @@
 package com.rectangles.chapman.utility;
 
+import java.awt.Point;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
 import com.rectangles.chapman.model.Rectangle;
+import com.rectangles.chapman.model.Segment;
 
 public class RectangleComparisons {
 
 
 	/**
 	 * determines whether two rectangles have one or more intersecting lines, and produces a result 
-	 * identifying the points of intersection.
+	 * identifying the points of intersection. Returns an Empty set for no intersections
 	 * @param a
 	 * @param b
 	 * @return
 	 */
-	public static boolean getIntersection (Rectangle a, Rectangle b) {
-		return (
-				a.getLeft()		<=	b.getRight()	&&
-				a.getRight()	>=	b.getLeft()		&&
-				a.getBottom()	<=	b.getTop()		&&
-				a.getTop()		>=	b.getBottom()	&&
-				getContainment(a, b) == false
-			);
+	public static Set<Point> getIntersection (Rectangle a, Rectangle b) {
+		List<Point> intersections = new ArrayList<>();
+
+		intersections.add(getSegmentIntersection(a.getSides().get("Left"), b.getSides().get("Bottom")));
+		intersections.add(getSegmentIntersection(a.getSides().get("Left"), b.getSides().get("Top")));
+		intersections.add(getSegmentIntersection(a.getSides().get("Right"), b.getSides().get("Bottom")));
+		intersections.add(getSegmentIntersection(a.getSides().get("Right"), b.getSides().get("Top")));
+		
+		intersections.add(getSegmentIntersection(b.getSides().get("Left"), a.getSides().get("Bottom")));
+		intersections.add(getSegmentIntersection(b.getSides().get("Left"), a.getSides().get("Top")));
+		intersections.add(getSegmentIntersection(b.getSides().get("Right"), a.getSides().get("Bottom")));
+		intersections.add(getSegmentIntersection(b.getSides().get("Right"), a.getSides().get("Top")));
+		
+		Set<Point> deduplicatedIntersections = intersections.stream()
+				.filter(intersection -> intersection != null)
+				.collect(Collectors.toSet());
+		return deduplicatedIntersections;
 	}
 	
+
+	/**
+	 * returns the intersection point of two Segments, if it exists. returns Null otherwise
+	 * @param vertical
+	 * @param horizontal
+	 * @return
+	 */
+	public static Point getSegmentIntersection(Segment vertical, Segment horizontal) {
+		Point v_min = vertical.getMin();
+		Point h_min = horizontal.getMin();
+		
+		if (
+				v_min.y <= h_min.y && h_min.y <= (v_min.y + vertical.getLength()) &&
+				h_min.x <= v_min.x && v_min.x <= (h_min.x + horizontal.getLength())
+		) return new Point(v_min.x, h_min.y);
+		return null;
+	}
+
 
 	/**
 	 * determines whether a rectangle is wholly contained within another rectangle.
@@ -32,17 +66,17 @@ public class RectangleComparisons {
 	public static boolean getContainment (Rectangle a, Rectangle b) {
 		//check if both left-right range and top-bottom range of A is within the respective ranges of B
 		if (
-			a.getLeft()		>	b.getLeft()		&&
-			a.getRight()	<	b.getRight()	&&
-			a.getTop()		<	b.getTop()		&&
-			a.getBottom()	>	b.getBottom()
+			a.getLeft()	>=	b.getLeft()		&&
+			a.getRight() <=	b.getRight()	&&
+			a.getTop() <=	b.getTop()		&&
+			a.getBottom() >= b.getBottom()
 		) return true;
 		//check if both left-right range and top-bottom range of B is within the respective ranges of A
 		else if (
-			b.getLeft()		>	a.getLeft()		&&
-			b.getRight()	<	a.getRight()	&&
-			b.getTop()		<	a.getTop()		&&
-			b.getBottom()	>	a.getBottom()
+			b.getLeft()	>= a.getLeft()		&&
+			b.getRight() <=	a.getRight()	&&
+			b.getTop() <= a.getTop()		&&
+			b.getBottom() >= a.getBottom()
 		) return true;
 		else return false;
 	}
@@ -61,11 +95,11 @@ public class RectangleComparisons {
 	public static boolean getAdjacency (Rectangle a, Rectangle b) {
 		if (
 			(a.getLeft() == b.getRight() || a.getRight() == b.getLeft()) &&
-			(a.getBottom() < b.getTop() && a.getTop() > b.getBottom())
+			(a.getBottom() <= b.getTop() && a.getTop() >= b.getBottom())
 		) return true;
 		else if (
 			(a.getTop() == 	b.getBottom() || a.getBottom() == b.getTop()) &&
-			(a.getLeft() <	b.getTop() && a.getRight() > b.getBottom())
+			(a.getLeft() <=	b.getTop() && a.getRight() >= b.getBottom())
 		) return true;
 		return false;
 	}
