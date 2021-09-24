@@ -7,6 +7,9 @@ This project makes various comparisons between two rectangles: Intersections, Co
 ## Usage
 
 Compile with maven or use the pre-compiled JAR file. Run with Java from the command line. Two random rectangles will be generated, and each property will be calculated. 
+
+> java -jar Application.java
+
 The application will print the following to the command line:
 
 1. The left, right, top, and bottom boundaries of rectangles A and B.
