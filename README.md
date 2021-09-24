@@ -12,7 +12,7 @@ Compile with maven or use the pre-compiled JAR file. Run with Java from the comm
 
 The application will print the following to the command line:
 
-1. The left, right, top, and bottom boundaries of rectangles A and B.
+1. The coordinates of rectangles A and B.
 2. Whether or not the rectangles A and B intersect, and a list of all intersection points if so.
 3. Whether or not the rectangles are adjacent.
 4. Whether or not A or B fully contains the other.
