@@ -1,7 +1,9 @@
 package com.rectangles.chapman.model;
 
 import java.awt.Point;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Rectangle {
@@ -65,6 +67,20 @@ public class Rectangle {
 		return sides;
 	}
 	
+	public List<Point> getCoordinates (){
+		List<Point> coordinates = new ArrayList<>();
+		coordinates.add(new Point(this.left, this.bottom));
+		coordinates.add(new Point(this.right, this.bottom));
+		coordinates.add(new Point(this.left, this.top));
+		coordinates.add(new Point(this.right, this.top));
+		
+		return coordinates;
+
+	}
+	
+	public String toString () {
+		return this.getCoordinates().toString();
+	}
 	
 	
 }
