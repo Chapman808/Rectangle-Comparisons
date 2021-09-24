@@ -5,6 +5,11 @@ import java.util.Random;
 import com.rectangles.chapman.model.Rectangle;
 import com.rectangles.chapman.utility.RectangleComparisons;
 
+/**
+ * @author Anthony Chapman
+ * @since 9/24/2021
+ *
+ */
 public class Application {
 
 public static void main(String[] args) {

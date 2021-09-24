@@ -13,7 +13,11 @@ import org.junit.Test;
 import com.rectangles.chapman.model.Rectangle;
 import com.rectangles.chapman.model.Segment;
 
-
+/**
+ * @author Anthony Chapman
+ * @since 9/24/2021
+ *
+ */
 public class RectangleComparisonsTest {
 
 	@Test

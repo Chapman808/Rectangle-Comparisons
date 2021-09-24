@@ -7,6 +7,11 @@ import java.awt.Point;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * @author Anthony Chapman
+ * @since 9/24/2021
+ *
+ */
 public class RectangleTest {
 
 	private Rectangle rect;

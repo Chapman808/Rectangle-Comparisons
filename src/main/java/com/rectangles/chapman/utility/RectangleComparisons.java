@@ -9,6 +9,11 @@ import java.util.stream.Collectors;
 import com.rectangles.chapman.model.Rectangle;
 import com.rectangles.chapman.model.Segment;
 
+/**
+ * @author Anthony Chapman
+ * @since 9/24/2021
+ *
+ */
 public class RectangleComparisons {
 
 

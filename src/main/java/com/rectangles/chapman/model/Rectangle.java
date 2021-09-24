@@ -6,6 +6,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author Anthony Chapman
+ * @since 9/24/2021
+ *
+ */
 public class Rectangle {
 	
 	//directional boundaries of the rectangle e.g. how far in a certain direction a rectangle reaches	

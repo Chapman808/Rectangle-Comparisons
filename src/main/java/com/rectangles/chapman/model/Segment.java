@@ -2,6 +2,11 @@ package com.rectangles.chapman.model;
 
 import java.awt.Point;
 
+/**
+ * @author Anthony Chapman
+ * @since 9/24/2021
+ *
+ */
 public class Segment {
 	private Point min;
 	private int length;
