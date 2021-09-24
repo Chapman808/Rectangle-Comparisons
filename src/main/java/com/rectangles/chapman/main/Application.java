@@ -14,7 +14,7 @@ public static void main(String[] args) {
 
 		System.out.println("\nRectangle Comparisons:\n\n");
 		System.out.printf("Rectangle A: %s\n", a);
-		System.out.printf("Rectangle A: %s\n\n", b);
+		System.out.printf("Rectangle B: %s\n\n", b);
 
 		System.out.printf("Intersections: %s\n", RectangleComparisons.getIntersection(a, b));
 		System.out.printf("Containment: %s\n", RectangleComparisons.getContainment(a, b));
