@@ -12,6 +12,7 @@ public static void main(String[] args) {
 		Rectangle a = getRandomRectangle(5);
 		Rectangle b = getRandomRectangle(5);
 
+		System.out.println("\nRectangle Comparisons:\n\n");
 		System.out.printf("Rectangle A: %s\n", a);
 		System.out.printf("Rectangle A: %s\n\n", b);
 

@@ -79,7 +79,11 @@ public class Rectangle {
 	}
 	
 	public String toString () {
-		return this.getCoordinates().toString();
+		StringBuilder out = new StringBuilder();
+		for (Point point : this.getCoordinates()) {
+			out.append(String.format("(%s, %s), ", point.x, point.y));
+		}
+		return out.toString();
 	}
 	
 	
